@@ -1,0 +1,94 @@
+<html>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<style>
+		div {
+			display: inline;
+		}
+		
+		.pitbull {
+			position: relative;
+		}
+		
+		.overlay {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 400px;
+			display: none;
+		}
+	</style>
+	
+	<h1>Event Delegation</h1>
+	
+	<div id="animals">
+		<div id="duck">
+			<img src="img/duck.jpg">
+		</div>
+		<div id="sheep">
+			<img src="img/sheep.jpg">
+		</div>
+		<div id="dog">
+			<img src="img/dog.jpg">
+		</div>
+	</div>
+
+	<h1>Duck Punching</h1>
+
+	<div id="pitbulls">
+		<div class="pitbull dog">
+			<img src="img/dog.jpg">
+			<img class="overlay" src="img/heart.png">
+		</div>
+		<div class="pitbull human">
+			<img src="img/pitbull2.jpg">
+			<img class="overlay" src="img/no.png">
+		</div>		
+	</div>
+
+	<h1>Code</h1>
+
+<pre style="background:#fff;color:#3b3b3b">(<span style="color:#ff5600">function</span>( <span style="color:#069;font-weight:700">$</span> ) {
+
+    <span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>animals <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( '<span style="color:#963dff">#animals</span>' );
+    <span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>pitbulls <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( '<span style="color:#963dff">#pitbulls</span>' );
+    
+    <span style="color:#ff5600">function</span> <span style="color:#21439c">handleClick</span>( e ) {
+        e.preventDefault();
+        
+        <span style="color:#ff5600">var</span> target <span style="color:#069;font-weight:700">=</span> e.<span style="color:#b7734c">target</span>;
+        <span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>target <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( target );
+
+        <span style="color:#069;font-weight:700">if</span>( <span style="color:#666">'duck'</span> <span style="color:#069;font-weight:700">===</span> target.ID <span style="color:#069;font-weight:700">||</span> <span style="color:#666">'duck'</span> <span style="color:#069;font-weight:700">===</span> <span style="color:#069;font-weight:700">$</span>target.<span style="color:#45ae34;font-weight:700">parent</span>()<span style="color:#45ae34;font-weight:700">.attr</span>( <span style="color:#666">'id'</span> ) ) {
+            <span style="color:#45ae34;font-weight:700">alert</span>( <span style="color:#666">'duck'</span> );
+        } <span style="color:#069;font-weight:700">else</span> {
+            <span style="color:#45ae34;font-weight:700">alert</span>( <span style="color:#666">'not a duck'</span> );
+        }
+    }
+    
+    <span style="color:#ff5600">function</span> <span style="color:#21439c">handlePitbull</span>( e ) {
+        e.preventDefault();
+        
+        <span style="color:#ff5600">var</span> target <span style="color:#069;font-weight:700">=</span> e.<span style="color:#b7734c">target</span>;
+        <span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>target <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( target );
+
+        <span style="color:#069;font-weight:700">if</span>( <span style="color:#069;font-weight:700">$</span>target.closest( <span style="color:#666">'.human'</span> )<span style="color:#45ae34;font-weight:700">.length</span> ) {
+            <span style="color:#069;font-weight:700">$</span>target.<span style="color:#45ae34;font-weight:700">siblings</span>( '<span style="color:#963dff">.overlay</span>' )<span style="color:#45ae34;font-weight:700">.show</span>().delay(<span style="color:#a8017e">1000</span>)<span style="color:#45ae34;font-weight:700">.fadeOut</span>( <span style="color:#666">'slow'</span> );
+        } <span style="color:#069;font-weight:700">else</span> {
+            <span style="color:#069;font-weight:700">$</span>target.<span style="color:#45ae34;font-weight:700">siblings</span>( '<span style="color:#963dff">.overlay</span>' )<span style="color:#45ae34;font-weight:700">.show</span>().delay(<span style="color:#a8017e">1000</span>)<span style="color:#45ae34;font-weight:700">.fadeOut</span>( <span style="color:#666">'slow'</span> );
+        }
+    }
+
+    
+    <span style="color:#a535ae">$</span>( <span style="color:#a535ae">document</span> )<span style="color:#45ae34;font-weight:700">.ready</span>(<span style="color:#ff5600">function</span>() {
+        <span style="color:#069;font-weight:700">$</span>animals.on( <span style="color:#666">'click'</span>, handleClick );
+        <span style="color:#069;font-weight:700">$</span>pitbulls.on( <span style="color:#666">'click'</span>, handlePitbull );
+    });
+    
+
+}( jQuery ));
+</pre>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</html>
