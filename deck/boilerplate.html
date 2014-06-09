@@ -136,6 +136,46 @@
 }( jQuery ));
 </pre>
     </section>
+    
+    <section class="slide">
+    	<h2>Variable Caching</h2>
+    	<pre style="background:#fff;color:#3b3b3b">
+<span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>animals <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( '<span style="color:#963dff">#animals</span>' );
+<span style="color:#ff5600">var</span> <span style="color:#069;font-weight:700">$</span>pitbulls <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( '<span style="color:#963dff">#pitbulls</span>' );</pre>
+		<ul>
+			<li>Cache all variables you plan to use more than once</li>
+			<li>Caching an element from the DOM is very inefficient</li>
+			<li>The $ can be used to indicate a jQuery variable</li>
+			<li>Using the <code>var</code> keyword ensures proper scope for the variable</li>
+
+		</ul>
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#069;font-weight:700">$</span>animals <span style="color:#069;font-weight:700">=</span> <span style="color:#a535ae">$</span>( '<span style="color:#963dff">#animals</span>' );
+<span style="color:#21439c">console</span><span style="color:#45ae34;font-weight:700">.log</span>(<span style="color:#a535ae">window</span>.<span style="color:#069;font-weight:700">$</span>animals <span style="color:#069;font-weight:700">instanceof</span> jQuery);
+<span style="color:#a535ae">true</span></pre>
+    </section>
+    
+    <section class="slide">
+    	<h2>Anonymous vs Named Functions</h2>
+<pre style="background:#fff;color:#3b3b3b"><span style="color:#ff5600">function</span> <span style="color:#21439c">handlePitbull</span>( e ) {
+        e.preventDefault();
+        
+        [...]
+}
+
+    
+<span style="color:#a535ae">$</span>( <span style="color:#a535ae">document</span> )<span style="color:#45ae34;font-weight:700">.ready</span>(<span style="color:#ff5600">function</span>() {
+    <span style="color:#069;font-weight:700">$</span>animals.on( <span style="color:#666">'click'</span>, handleClick );
+    <span style="color:#069;font-weight:700">$</span>pitbulls.on( <span style="color:#666">'click'</span>, handlePitbull );
+});</pre>
+    </section>
+    
+    <section class="slide">
+    	<h2>Anonymous vs Named Functions</h2>
+	</section>
+	
+    <section class="slide">
+    	<h2>Scope</h2>
+    </section>
 
     <!-- End slides. -->
 
