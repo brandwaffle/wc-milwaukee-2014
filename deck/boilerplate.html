@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Your deck.js Presentation</title>
+  <title>JavaScript: The Good, The Bad, and The Anonymous</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" media="screen" href="core/deck.core.css">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="themes/style/neon.css">
 
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
@@ -171,7 +171,20 @@
     
     <section class="slide">
     	<h2>Anonymous vs Named Functions</h2>
+    	<ul>
+    		<li class="slide">Declaring a callback function is way more performant than calling it anonymously</li>
+    		<li class="slide">How much more performant?</li>
+    	</ul>
+		<p class="slide">
+			<a href="http://jsperf.com/anonymous-vs-named-functions2/2" target="_blank">
+				<img src="img/alot.png" />
+			</a>
+		</p>
 	</section>
+
+    <section class="slide">
+  		<h2>jsPerf</h2>
+  	</section>
 	
     <section class="slide">
     	<h2>Scope</h2>

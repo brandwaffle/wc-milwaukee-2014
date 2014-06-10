@@ -219,6 +219,9 @@ h2 {
   padding-top: .5em;
   margin: 0 0 .66666em 0;
   border-bottom: 3px solid #888;
+  background: url(./10up.png) no-repeat 0 .5em;
+  background-size: 90px;
+  padding-left: 2em;
 }
 
 h3 {
@@ -298,11 +301,11 @@ h1 {
 }
 
 h2 {
-  color: #af0;
+  color: #54cdcd;
   border-bottom-color: #ccc;
   font-weight: normal;
   font-weight: 100;
-  text-shadow: 0 0 15px #af0, 0 0 2px #fff;
+  text-shadow: 0 0 15px #54cdcd, 0 0 2px #fff;
   border-bottom: 1px solid #333;
 }
 
@@ -321,7 +324,7 @@ pre code {
 }
 
 code {
-  color: #f0a;
+  color: #B53234;
 }
 
 blockquote {
@@ -351,7 +354,7 @@ blockquote cite {
 }
 
 a, a:hover, a:focus, a:active, a:visited {
-  color: #f0a;
+  color: #B53234;
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -379,7 +382,7 @@ a:hover, a:focus {
 }
 
 .deck-prev-link, .deck-next-link {
-  background: #f0a;
+  background: #B53234;
   text-shadow: 0 0 3px #fff;
 }
 .deck-prev-link, .deck-prev-link:hover, .deck-prev-link:focus, .deck-prev-link:active, .deck-prev-link:visited, .deck-next-link, .deck-next-link:hover, .deck-next-link:focus, .deck-next-link:active, .deck-next-link:visited {
@@ -387,7 +390,7 @@ a:hover, a:focus {
 }
 .deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
   text-decoration: none;
-  box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+  box-shadow: 0 0 20px #B53234, 0 0 5px #fff;
 }
 
 .deck-status {
@@ -396,7 +399,7 @@ a:hover, a:focus {
 
 .goto-form {
   background: #000;
-  border: 1px solid #f0a;
+  border: 1px solid #B53234;
 }
 .goto-form label {
   color: #fff;
@@ -410,12 +413,12 @@ a:hover, a:focus {
 }
 .boxshadow .deck-menu .deck-current {
   background: #000;
-  box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+  box-shadow: 0 0 20px #B53234, 0 0 5px #fff;
 }
 .no-touch .deck-menu .slide:hover {
   background: #444;
 }
 .no-touch.boxshadow .deck-menu .slide:hover {
   background: #000;
-  box-shadow: 0 0 20px #f0a, 0 0 5px #fff;
+  box-shadow: 0 0 20px #B53234, 0 0 5px #fff;
 }
