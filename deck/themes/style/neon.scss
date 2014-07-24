@@ -1,10 +1,10 @@
 @import "reset";
 
 h1 {
-  color:#0af;
+  color:#54cdcd;
   font-weight:normal;
   font-weight:100;
-  text-shadow:0 0 50px #0af, 0 0 3px #fff;
+  text-shadow:0 0 50px #54cdcd, 0 0 3px #fff;
 }
 
 h2 {
@@ -32,7 +32,7 @@ pre {
 }
 
 code {
-  color:#f0a;
+  color:#B53234;
 }
 
 blockquote {
@@ -60,7 +60,7 @@ blockquote {
 
 a {
   &, &:hover, &:focus, &:active, &:visited {
-    color:#f0a;
+    color:#B53234;
     text-decoration:none;
   }
 
@@ -97,7 +97,7 @@ a {
 }
 
 .deck-prev-link, .deck-next-link {
-  background:#f0a;
+  background:#B53234;
   text-shadow:0 0 3px #fff;
 
   &, &:hover, &:focus, &:active, &:visited {
@@ -106,7 +106,7 @@ a {
 
   &:hover, &:focus {
     text-decoration:none;
-    box-shadow:0 0 20px #f0a, 0 0 5px #fff;
+    box-shadow:0 0 20px #B53234, 0 0 5px #fff;
   }
 }
 
@@ -116,7 +116,7 @@ a {
 
 .goto-form {
   background:#000;
-  border:1px solid #f0a;
+  border:1px solid #B53234;
 
   label {
     color:#fff;
@@ -133,7 +133,7 @@ a {
 
     .boxshadow & {
       background:#000;
-      box-shadow:0 0 20px #f0a, 0 0 5px #fff;
+      box-shadow:0 0 20px #B53234, 0 0 5px #fff;
     }
   }
 
@@ -143,6 +143,6 @@ a {
 
   .no-touch.boxshadow & .slide:hover {
     background:#000;
-    box-shadow:0 0 20px #f0a, 0 0 5px #fff;
+    box-shadow:0 0 20px #B53234, 0 0 5px #fff;
   }
 }

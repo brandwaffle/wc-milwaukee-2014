@@ -29,6 +29,11 @@
   <!-- Required Modernizr file -->
   <script src="modernizr.custom.js"></script>
   
+  <!-- Syntax Highlighting -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
   <style type="text/css">
   	div#animals,
   	div#pitbulls {
@@ -184,11 +189,58 @@
 
     <section class="slide">
   		<h2>jsPerf</h2>
+  		<ul>
+  			<li class="slide">Enables cross-device testing</li>
+  			<li class="slide">Crowd-sourced data means lots of people can help you build test data</li>
+  			<li class="slide">Remember: test the test.</li>
+  			<li class="slide">Tests may have multiple revisions, some of which are unique to an individual use-case</li>
+  		</ul>
   	</section>
 	
     <section class="slide">
     	<h2>Scope</h2>
+    	<pre><code class="js">
+var global_scope = 'hello, I am scoped at the global level';
+
+function scope_test() {
+	var local_scope = 'I am only defined in this function';
+	
+	alert( local_scope );
+	
+	alert( global_scope );
+	
+	alert( window.global_scope );
+}
+
+scope_test();
+alert( local_scope );
+
+
+    	</code></pre>
     </section>
+
+    <section class="slide">
+    	<h2>Scope (continued)</h2>
+    	<pre><code class="js">
+function get_the_ID(el){
+	return $(el).attr('id') || false;
+}
+    	</code></pre>
+    	<ul>
+    		<li class="slide">The example above is the equivalent of creating a function in your functions.php file named get_the_ID()</li>
+    		<li class="slide">By default, JavaScript (like PHP) functions defined outside a class become global</li>
+    		<li class="slide">The solution is to either put your JS into a class object, or to create a closure</li>
+    	</ul>
+    </section>
+
+	<section class="slide">
+		<h2>Scope (continued)</h2>
+		<img src="img/litterbug.jpg">
+		<ul>
+    		<li>Closures isolate the functions and variable definitions within them by creating an overriding scope limited to the closure itself</li>
+    		<li>In contrast, a JS object can be exposed publicly, but gains the advantage of a namespace (e.g. jQuery.ajax())</li>		
+		</ul>
+	</section>
 
     <!-- End slides. -->
 
