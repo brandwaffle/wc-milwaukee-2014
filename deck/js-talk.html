@@ -69,10 +69,13 @@
 		<span class="speaker-name">Vasken Hauri, <em>VP of Strategic Engineering</em></span>
 	</div>
 </header>
+
   <div class="deck-container">
 
     <!-- Begin slides. Just make elements with a class of slide. -->
-
+	<section class="slide" id="title-slide">
+		<h1>JavaScript: The good, the bad, and the anonymous</h1>
+	</section>
     <section class="slide">
 	<h2>Event Delegation</h2>
 	
@@ -235,7 +238,7 @@ function get_the_ID(el){
     	</code></pre>
     	<ul>
     		<li class="slide">The example above is the equivalent of creating a function in your functions.php file named get_the_ID()</li>
-    		<li class="slide">By default, JavaScript (like PHP) functions defined outside a class become global</li>
+    		<li class="slide">By default, JavaScript (like PHP) functions defined outside a closure become global</li>
     		<li class="slide">The solution is to either put your JS into a class object, or to create a closure</li>
     	</ul>
     </section>
@@ -245,10 +248,42 @@ function get_the_ID(el){
 		<img src="img/litterbug.jpg">
 		<ul>
     		<li>Closures isolate the functions and variable definitions within them by creating an overriding scope limited to the closure itself</li>
-    		<li>In contrast, a JS object can be exposed publicly, but gains the advantage of a namespace (e.g. jQuery.ajax())</li>		
+    		<li>Closures give you the power to keep as much of the code private (i.e. within the closure) as you want, while still allowing you to expose methods (e.g. jQuery.ajax())</li>		
 		</ul>
 	</section>
+	
+	<section class="slide">
+		<h2>JSLint and JSHint</h2>
+		<ul>
+			<li class="slide">Run the tools online (<a target="_blank" href="http://www.jslint.com/">JSLint</a>) or (<a target="_blank" href="http://www.jshint.com/">JSHint</a>)</li>
+			<li class="slide">Use a plugin available in your favorite IDE</li>
+			<li class="slide">Run the tools regularly as part of a grunt or similar automated workflow</li>
+			<li class="slide">By the way, if you don't know about <a href="http://gruntjs.com/">Grunt</a>, check it out!</li>
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<h2>A few thoughts</h2>
+		<ul>
+			<li class="slide">Think about your JS the way you think about your PHP: performance matters</li>
+			<li class="slide">Bad JavaScript slows less powerful computers, and can really hang up a mobile device</li>
+			<li class="slide">If you open-source or distribute your JS, make sure to remove any pollution of the global namespace, except any root-level object name (e.g. jQuery) that you might elect to use</li>
+			<li class="slide">On that note, if you write a jQuery plugin, don't give your object a brand-new global name. Use and extend the jQuery object</li>
+			<li class="slide">The easiest way to avoid silly (and sometimes very serious) mistakes with JavaScript is to lint your JS: no one is perfect</li>
+		</ul>
 
+	</section>
+	
+	<section class="slide">
+		<h2>Contact Info</h2>
+		<ul>
+			<li>Vasken Hauri</li>
+			<li>Twitter: @vaskenhauri</li>
+			<li>Email: vasken@10up.com</li>
+			<li>Company Site: <a href="http://10up.com">10up.com</a></li>
+			<li>Personal Site: <a href="http://neverblog.net">neverblog.net</a></li>
+		</ul>
+	</section>
     <!-- End slides. -->
 
     <!-- Begin extension snippets. Add or remove as needed. -->

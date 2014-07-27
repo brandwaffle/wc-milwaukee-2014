@@ -37,3 +37,7 @@
 	
 
 }( jQuery ));
+
+function handleClick( e ) {
+	console.log('I am the global handleClick function');
+}
